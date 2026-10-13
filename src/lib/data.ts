@@ -106,7 +106,13 @@ export const galleryItems: GalleryItem[] = [
   { id: 'g4', src: 'https://images.pexels.com/photos/33514501/pexels-photo-33514501.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Stainless steel pipes and tubes supplied by Shree Ramdev Steel Pune', caption: 'SS Pipes & Tubes', category: 'SS Pipes & Fittings' },
   { id: 'g5', src: 'https://images.pexels.com/photos/38311093/pexels-photo-38311093.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'SS kitchen drawer basket and storage trolley for modular kitchen', caption: 'Kitchen Drawer Baskets', category: 'Kitchen Storage' },
   { id: 'g6', src: 'https://images.pexels.com/photos/27999552/pexels-photo-27999552.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Modern apartment balcony with glass and SS railing in PCMC Pune', caption: 'Balcony Glass Railing', category: 'Balcony Railings' },
-  { id: 'g7', src: 'https://images.pexels.com/photos/7148841/pexels-photo-7148841.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Modular kitchen with stainless steel trolley supplied by Shree Ramdev Steel', caption: 'Modular Kitchen with SS Trolley', category: 'Modular Kitchen' },
+    {
+      id: 'g7',
+      src: 'https://images.pexels.com/photos/7148841/pexels-photo-7148841.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Modular kitchen with stainless steel trolley supplied by Shree Ramdev Steel',
+      caption: 'Modular Kitchen with SS Trolley',
+      category: 'Kitchen Trolleys'
+    },
   { id: 'g8', src: 'https://images.pexels.com/photos/8853524/pexels-photo-8853524.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'SS railing connectors clamps and fittings supplied in Pune PCMC', caption: 'SS Railing Connectors & Clamps', category: 'SS Railing Accessories' },
   { id: 'g9', src: 'https://images.pexels.com/photos/36272819/pexels-photo-36272819.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Stainless steel railing on wall for staircase supplied in Pune', caption: 'Wall-Mounted SS Handrail', category: 'Staircase Railings' },
   { id: 'g10', src: 'https://images.pexels.com/photos/16587776/pexels-photo-16587776.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Decorative SS balls and finials for railing ends from Shree Ramdev Steel', caption: 'SS Decorative Balls & Finials', category: 'SS Railing Accessories' },

@@ -31,26 +31,22 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <button
-              onClick={() => handleNavClick('#home')}
-              className="flex items-center gap-2 text-left"
-              aria-label="Shree Ramdev Steel — Home"
-            >
-              <div className="flex h-9 w-9 lg:h-11 lg:w-11 items-center justify-center rounded-lg bg-gold-gradient text-steel-950 font-heading font-bold text-lg shadow-gold shrink-0">
-                SR
-              </div>
-              <div className="hidden sm:block">
-                <p className="font-heading font-bold text-white text-base lg:text-lg leading-tight">
-                  Shree Ramdev Steel
-                </p>
-                <p className="text-steel-400 text-[10px] lg:text-xs leading-tight">
-                  Retail + Wholesale SS Supplier
-                </p>
-              </div>
-              <p className="sm:hidden font-heading font-bold text-white text-base">
-                Shree Ramdev Steel
-              </p>
-            </button>
+            
+        
+        {/* Logo */}
+        <button
+          onClick={() => handleNavClick('#home')}
+          className="flex items-center text-left shrink-0"
+          aria-label="Shree Ramdev Steel — Home"
+        >
+          <img
+            src="/logo.png"
+            alt="Shree Ramdev Steel"
+            className="h-12 w-auto max-w-[180px] sm:h-14 sm:max-w-[210px] lg:h-16 lg:max-w-[240px] object-contain"
+            width={240}
+            height={64}
+          />
+        </button>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">

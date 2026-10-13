@@ -11,9 +11,14 @@ export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filteredItems = useMemo(() => {
-    if (activeFilter === 'All') return galleryItems;
-    return galleryItems.filter((item) => item.category === activeFilter);
-  }, [activeFilter]);
+  if (activeFilter === 'All') return galleryItems;
+
+  return galleryItems.filter(
+    (item) =>
+      item.category.trim().toLowerCase() ===
+      activeFilter.trim().toLowerCase()
+  );
+}, [activeFilter]);
 
   const openLightbox = useCallback((index: number) => {
     const item = filteredItems[index];
@@ -59,7 +64,7 @@ export default function Gallery() {
 
         {/* Filter Tabs */}
         <div className="reveal mb-8">
-          <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2 justify-start sm:justify-center">
+          <div className="flex flex-wrap gap-2 pb-2 justify-center">
             {galleryCategories.map((cat) => (
               <button
                 key={cat}
@@ -76,12 +81,28 @@ export default function Gallery() {
           </div>
         </div>
 
+        {filteredItems.length === 0 && (
+        <div className="col-span-full py-16 text-center">
+          <p className="text-steel-950 font-semibold">
+            No images found in this category.
+          </p>
+          <p className="mt-2 text-sm text-steel-400">
+            Please select another category or choose All.
+          </p>
+          <button
+            onClick={() => setActiveFilter('All')}
+            className="mt-4 rounded-lg bg-steel-950 px-5 py-2 text-white"
+          >
+            View All Images
+          </button>
+        </div>
+      )}
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4">
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className="reveal group relative rounded-xl overflow-hidden cursor-pointer shadow-card hover:shadow-premium transition-all duration-300"
+              className="group relative rounded-xl overflow-hidden cursor-pointer shadow-card hover:shadow-premium transition-all duration-300"
               onClick={() => openLightbox(index)}
             >
               <div className="aspect-square overflow-hidden">

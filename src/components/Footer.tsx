@@ -29,24 +29,35 @@ export default function Footer() {
     <footer className="bg-steel-900 text-steel-300 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-          {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold-gradient text-steel-950 font-heading font-bold text-base shrink-0">
-                SR
-              </div>
-              <p className="font-heading font-bold text-white text-lg">Shree Ramdev Steel</p>
-            </div>
-            <p className="text-sm leading-relaxed mb-4">
-              Retail and wholesale supplier of stainless steel railing accessories, SS pipes, bends,
-              fittings, balls, finials, kitchen trolleys and storage solutions in Pune, PCMC and
-              Alandi.
-            </p>
-            <p className="text-xs text-steel-400 font-medium">
-              Trader – Retailer | Retail &amp; Wholesale
-            </p>
-          </div>
+          
+      
+        {/* Brand */}
+        <div className="sm:col-span-2 lg:col-span-1">
+          <button
+            onClick={() => handleNavClick('#home')}
+            className="flex items-center text-left mb-5"
+            aria-label="Shree Ramdev Steel — Home"
+          >
+            <img
+              src="/logo.png"
+              alt="Shree Ramdev Steel"
+              className="h-16 w-auto max-w-[260px] sm:h-20 sm:max-w-[300px] object-contain"
+              width={300}
+              height={80}
+            />
+          </button>
 
+          <p className="text-sm leading-relaxed mb-4">
+            Retail and wholesale supplier of stainless steel railing accessories, SS pipes, bends,
+            fittings, balls, finials, kitchen trolleys and storage solutions in Pune, PCMC and
+            Alandi.
+          </p>
+
+          <p className="text-xs text-steel-400 font-medium">
+            Trader – Retailer | Retail &amp; Wholesale
+          </p>
+        </div>
+        
           {/* Quick Links */}
           <div>
             <h3 className="font-heading font-semibold text-white text-sm mb-4">Quick Links</h3>
